@@ -32,6 +32,10 @@ filetype plugin indent on
 
     " Always turn on modeline support
     set modeline
+    
+    if has("autocmd")
+      au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+    endif
 " }
 
 " Behavior {
@@ -58,6 +62,7 @@ filetype plugin indent on
     set autoindent
     set smartindent
 
+    set clipboard=unnamed
 " }
 
 " UI {
@@ -178,3 +183,43 @@ filetype plugin indent on
 "      endif
 "    let g:airline_symbols.space = "\ua0"
 " }
+"
+" syntastic {
+"    set statusline+=%#warningmsg#
+"    set statusline+=%{SyntasticStatuslineFlag()}
+"    set statusline+=%*
+"    
+"    let g:syntastic_always_populate_loc_list = 1
+"    let g:syntastic_auto_loc_list = 1
+"    let g:syntastic_check_on_open = 1
+"    let g:syntastic_check_on_wq = 0
+"}
+
+" tagbar
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }

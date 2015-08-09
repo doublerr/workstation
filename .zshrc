@@ -26,3 +26,9 @@ function dockercleanimages() {
 function dockercleanps() {
     docker ps -a | awk '$1 != "CONTAINER" {print $1}' | xargs docker rm
 }
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/ryan.richard/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/ryan.richard/google-cloud-sdk/completion.zsh.inc'

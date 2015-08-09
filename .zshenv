@@ -11,11 +11,12 @@ if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
 fi
 
 typeset -U path
-path=($path ${HOME}/bin ${HOME}/projects/docker-compose/bin /Library/Frameworks/Python.framework/Versions/3.4/bin)
+path=($path /usr/local/git/bin ${HOME}/bin ${HOME}/projects/docker-compose/bin /Library/Frameworks/Python.framework/Versions/3.4/bin)
 
 export GOPATH=${HOME}/projects/go
-
-path=($path $gopath/bin)
+export PATH=${PATH}:${GOPATH}/bin
+#typeset -U path
+#path=($path $gopath/bin)
 
 export EDITOR="vim"
 export VISUAL="vim"
