@@ -28,6 +28,10 @@ function dockercleanps() {
     docker ps -a | awk '$1 != "CONTAINER" {print $1}' | xargs docker rm
 }
 
+function dockerstopall() {
+    docker ps | awk '$1 != "CONTAINER" {print $1}' | xargs docker stop
+}
+
 # The next line updates PATH for the Google Cloud SDK.
 source '/Users/ryan.richard/google-cloud-sdk/path.zsh.inc'
 
