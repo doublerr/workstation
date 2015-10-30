@@ -14,7 +14,8 @@ fi
 
 source ~/.zshenv
 
-boot2docker up | grep export | while read cmd; do eval "${cmd}"; done
+docker-machine start default
+eval "$(docker-machine env default)"
 
 export EDITOR="vim"
 export VISUAL="vim"

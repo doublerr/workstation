@@ -168,11 +168,11 @@ filetype plugin indent on
 
 " python-mode {
     " https://github.com/klen/python-mode
-    let g:pymode_folding = 0
-    let g:pymode_lint_checkers = []
-    let g:pymode_lint_ignore = "E128,E201,E202,E251,E501"
-    autocmd FileType python setlocal nonumber
-    let g:pymode_rope = 0
+"    let g:pymode_folding = 0
+"    let g:pymode_lint_checkers = []
+"    let g:pymode_lint_ignore = "E128,E201,E202,E251,E501"
+"    autocmd FileType python setlocal nonumber
+"    let g:pymode_rope = 0
 " }
 "
 " vim-airline {

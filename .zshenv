@@ -11,7 +11,7 @@ if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
 fi
 
 typeset -U path
-path=($path /usr/local/git/bin ${HOME}/bin ${HOME}/projects/docker-compose/bin /Library/Frameworks/Python.framework/Versions/3.4/bin)
+path=($path /usr/local/git/bin ${HOME}/bin /Library/Frameworks/Python.framework/Versions/3.4/bin)
 
 export GOPATH=${HOME}/projects/go
 export PATH=${PATH}:${GOPATH}/bin
