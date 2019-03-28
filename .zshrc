@@ -1,8 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+#export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/ryan.richard/.oh-my-zsh
+export ZSH=/Users/ryanrichard/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -51,7 +51,17 @@ ZSH_THEME="steeef"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker go httpie kubectl osx virtualenv vi-mode history-substring-search)
+plugins=(
+git 
+docker 
+go 
+httpie 
+kubectl 
+osx 
+virtualenv 
+vi-mode 
+history-substring-search
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -73,7 +83,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -87,6 +97,7 @@ source $ZSH/oh-my-zsh.sh
 # Custom Settings
 export GOPATH=${HOME}/projects/go
 export PATH=${PATH}:${GOPATH}/bin
+export PATH=$PATH:/Users/ryanrichard/Downloads/protoc-3.7.0-rc-2-osx-x86_64/bin
 export EDITOR="vim"
 export VISUAL="vim"
 export PKG_CONFIG_PATH=/usr/local/opt/libffi/lib/pkgconfig
