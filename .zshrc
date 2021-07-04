@@ -65,7 +65,7 @@ ZSH_THEME="steeef"
 plugins=(
 git
 docker
-go
+golang
 httpie
 kubectl
 osx
